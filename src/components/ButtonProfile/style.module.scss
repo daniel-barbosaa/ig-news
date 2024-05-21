@@ -1,0 +1,17 @@
+.menuListContent {
+    background: var(--gray-850);
+    border: none;
+    
+    .MenuListItem {
+        background: var(--gray-850);
+    }
+
+    .MenuListItem.iconItemContent{
+        a {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+}

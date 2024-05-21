@@ -1,0 +1,63 @@
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.accountInfosSection {
+    background: var(--gray-850);
+    max-width: 720px;
+    margin: 5rem auto 0;
+    padding: 1.225rem 0.525rem;
+    border-radius: 8px;
+
+
+    button {
+        height: 3rem;
+        border-radius: 3rem;
+        padding: 0 1.5rem;
+        margin-top: 2rem;
+        color: #a8a8b3a1;
+        transition: color .2s;
+
+        &:hover {
+           color: var(--gray-100);
+        }
+    }
+
+    .containerCancelButton {
+        display: flex;
+        justify-content: end;
+    }
+
+    
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .subscriptionStatus {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+
+        h3{
+            font-size: 1.245rem;
+            font-weight: 500;
+        }
+    }
+    
+}
+
+.accoutSiganatureInactive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 720px;
+    margin: 5rem auto 0;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
