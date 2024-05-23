@@ -103,7 +103,7 @@ NEXTAUTH_URL=http://localhost:3000
 
 ## Contato
 
-• Email: danielmendess.dev@gmail.com
+• Email: danielmendess.dev@gmail.com <br></br>
 • LinkedIn: https://www.linkedin.com/in/daniel-barbos/
 
 
