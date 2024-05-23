@@ -21,4 +21,31 @@ Um aplicação com base na ideia de um blog, um blog por assinatura, já no inic
 ## Instalação
 
 ```sh
+# Instalar o CLI na maquina. É importante que faça essa etapa para o funcionamento correto da aplicação
+https://learn.microsoft.com/pt-br/dotnet/machine-learning/how-to-guides/install-ml-net-cli?tabs=windows
+
+
 # Clone o repositório
+git clone https://github.com/daniel-barbosaa/ig-news.git
+
+# Entre no diretório do projeto
+cd ig-news
+
+# Instale as dependências
+npm install
+
+# Iniciar
+
+npm dev
+
+# Antes de usar a aplicação faça isso, essa é a etapa para ouvir o webhooks da aplicação
+
+# Execute na linha de comando do seu pc:
+
+stripe login
+
+stripe listen --forward-to localhost:3000/api/webhooks
+
+# Acesse
+http://localhost:3000
+
