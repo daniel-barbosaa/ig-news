@@ -20,13 +20,13 @@ Um aplicação com base na ideia de um blog, um blog por assinatura, já no inic
 ## Tecnologias utilizadas 
 
 - [Typescript](https://www.typescriptlang.org/docs/)
-- NextJs
-- ReactJs
-- NodeJs
-- FaunaDB 
-- Stripe
-- Primic
-- Chakra UI
+- [NextJs](https://nextjs.org/docs
+- [ReactJs](https://legacy.reactjs.org/docs/getting-started.html)
+- [NodeJs](https://nodejs.org/docs/latest/api/)
+- [FaunaDB](https://docs.fauna.com/fauna/current/)
+- [Stripe](https://docs.stripe.com/payments?payments=popular)
+- [Primic](https://prismic.io/docs)
+- [Chakra UI](https://v2.chakra-ui.com/docs/components)
 
 
 ## Instalação
