@@ -17,10 +17,14 @@ Uma aplicação web desenvolvida na ideia de um blog de noticias sobre o mundo d
 
 Um aplicação com base na ideia de um blog, um blog por assinatura, já no inicio você tem opção de login com github e opção para assinar o produto, porém só é permitido ter uma assinatrura depois de logado. Na aba posts para os não assinantes tem uma breve parte de cada post e só é liberado o acesso total do post a partir de assinado. Para quem curte noticias sobre a área da tecnologia ficou algo muito prático e de facíl acesso, sem muita firula.
 
+<img src="https://github.com/daniel-barbosaa/ig-news/assets/101154066/26234b6a-0d79-493d-85e6-408856234ebd" alt="capa-do-projeto">
+<img src="https://github.com/daniel-barbosaa/ig-news/assets/101154066/91e3541a-e7ab-4608-ac32-2b9cf6b4b568" alt="capa-do-projeto">
+
+
 ## Tecnologias utilizadas 
 
 - [Typescript](https://www.typescriptlang.org/docs/)
-- [NextJs](https://nextjs.org/docs
+- [NextJs](https://nextjs.org/docs)
 - [ReactJs](https://legacy.reactjs.org/docs/getting-started.html)
 - [NodeJs](https://nodejs.org/docs/latest/api/)
 - [FaunaDB](https://docs.fauna.com/fauna/current/)
