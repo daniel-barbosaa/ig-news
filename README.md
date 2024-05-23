@@ -38,8 +38,7 @@ npm install
 
 npm dev
 
-# Antes de usar a aplicação faça isso, essa é a etapa para ouvir o webhooks da aplicação
-
+# Antes de usar a aplicação faça isso, essa é a etapa para ouvir o webhooks da aplicação para que funcione conforme o esperado
 # Execute na linha de comando do seu pc:
 
 stripe login
