@@ -9,9 +9,8 @@ Uma aplicação web desenvolvida na ideia de um blog de noticias sobre o mundo d
 3. [Instalação](#instalação)
 4. [Uso](#uso)
 5. [Configuração](#configuração)
-6. [Licença](#licença)
-7. [Contato](#contato)
-8. [Agradecimentos](#agradecimentos)
+6. [Contato](#contato)
+7. [Agradecimentos](#agradecimentos)
 
 
 ## Descrição 
@@ -20,7 +19,7 @@ Um aplicação com base na ideia de um blog, um blog por assinatura, já no inic
 
 ## Tecnologias utilizadas 
 
-- Typescript
+- [Typescript](https://www.typescriptlang.org/docs/)
 - NextJs
 - ReactJs
 - NodeJs
@@ -59,7 +58,7 @@ ou
 yarn dev
 
 ```
-## Configurações
+## Configuração
 
 ```sh
 # Antes de usar a aplicação faça isso, essa é a etapa para ouvir o webhooks da aplicação para que funcione conforme o esperado
@@ -102,6 +101,10 @@ NEXTAUTH_URL=http://localhost:3000
 
 ```
 
+## Contato
+
+• Email: danielmendess.dev@gmail.com
+• LinkedIn: https://www.linkedin.com/in/daniel-barbos/
 
 
 
