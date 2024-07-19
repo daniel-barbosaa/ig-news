@@ -6,5 +6,8 @@ setupFilesAfterEnv:[
 transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
 },
-testEnvironment:"jsdom"
+testEnvironment:"jsdom",
+moduleNameMapper: {
+    "\\.(scss|png|sass)$": "identity-obj-proxy"
+}
 };
