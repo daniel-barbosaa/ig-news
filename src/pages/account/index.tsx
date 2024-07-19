@@ -36,12 +36,12 @@ export default function Account () {
     const {data: session} = useSession() as {data: Session}
     const router = useRouter()
 
-    let isSubscription = session?.activeSubscription
+    const isSubscription = session?.activeSubscription
 
 
     useEffect(() => {
-        isSubscription = session?.activeSubscription 
-    }, [session])
+        
+    }, [isSubscription])
 
     const handleCancelSubscription  = async () => {
         const subscriptionId = session.activeSubscription?.data.id
@@ -65,7 +65,7 @@ export default function Account () {
                 <h1>Signatures</h1>
                 <div className={styles.subscriptionStatus}>
                     <h3>News about the React world</h3>
-                    {isSubscription ? <Badge colorScheme='green' variant='outline'>ACTIVE</Badge> : <Badge colorScheme='red' variant='outline'>CANCELED</Badge> }
+                    {isSubscription ? <Badge colorScheme='green'>ACTIVE</Badge> : <Badge colorScheme='red'>CANCELED</Badge> }
                 </div>
                <div className={styles.containerCancelButton}>
                 {isSubscription && <button className={styles.cancelaButton} onClick={onOpen} type="button">Cancel Subscription</button> }

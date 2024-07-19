@@ -4,7 +4,7 @@ import logoImg from '../../../public/logo.png'
 import styles from './style.module.scss'
 import { SignButton } from '../SingInButton'
 import { useRouter } from 'next/router'
-import { LinkActive } from '../linkActive'
+import { LinkActive } from '../LinkActive'
 
 import { ButtonProfile } from '../ButtonProfile'
 import { useSession } from 'next-auth/react'
@@ -22,7 +22,7 @@ export function Header () {
                 <Image src={logoImg} alt='ig.news' width={101} height={30.5} />
                     <nav>
                         <LinkActive href='/' legacyBehavior activeClassName={styles.active}>
-                        <a >Home</a>
+                        <a>Home</a>
                         </LinkActive>
                         <LinkActive href='/posts' legacyBehavior activeClassName={styles.active}>
                         <a >Post</a>
