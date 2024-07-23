@@ -9,5 +9,6 @@ transform: {
 testEnvironment:"jsdom",
 moduleNameMapper: {
     "\\.(scss|png|sass)$": "identity-obj-proxy"
-}
+},
+preset: 'ts-jest',
 };

@@ -1,4 +1,4 @@
-import {render} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import { Header } from '.'
 
 // Sempre que um componente depende de uma lib ou de uma função externa precisamos "mockar" essa função botando um retorno fictício, exemplos abaixo
@@ -27,11 +27,11 @@ jest.mock('next/image')
 describe("Header component", () => {
     // cada it, significa isto, espero
     it('Esperamos um link Home e outro Post', ()=> {
-        const {getByText} = render(
+        render(
             <Header/>
         )
-        expect(getByText('Home')).toBeInTheDocument()
-        expect(getByText('Post')).toBeInTheDocument()
+        expect(screen.getByText('Home')).toBeInTheDocument()
+        expect(screen.getByText('Post')).toBeInTheDocument()
     })
    
 })
