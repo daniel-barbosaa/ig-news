@@ -5,12 +5,7 @@ import { getStipeJs } from '../../services/stripe-js'
 import { useRouter } from 'next/router'
 
 
-
-interface SubscribeButtonProps {
-    priceId: string
-}
-
-export function SubscribeButton ({priceId}: SubscribeButtonProps) { 
+export function SubscribeButton () { 
     const { data: session, status } = useSession();    
 
     const router = useRouter()
@@ -43,3 +38,5 @@ export function SubscribeButton ({priceId}: SubscribeButtonProps) {
         <button type="button" className={styles.subscribeButton} onClick={handleSubscribe}>Subscribe now</button>
     )
 }
+
+export default SubscribeButton
