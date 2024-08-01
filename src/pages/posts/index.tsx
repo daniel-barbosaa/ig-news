@@ -19,7 +19,6 @@ interface PostsProps {
 
 export default  function Posts({posts}: PostsProps) {
 
-    
     return(
         <>
          <Head>
@@ -51,7 +50,6 @@ export const getStaticProps: GetStaticProps = async ()  => {
     const response = await prismic.getAllByType('publication')
 
     const posts = response.map(post => {
-
         const excerptNode = post.data.content.find(content => content.type === 'paragraph');
         const excerpt = excerptNode && 'text' in excerptNode ? excerptNode.text : '';
         return {
