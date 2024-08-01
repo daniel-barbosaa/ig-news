@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react'
-import Post, {getStaticProps} from '../../pages/posts';
 import { createClient} from '../../services/prismicio'
+import Posts, {getStaticProps} from '../../pages/posts';
 
 const posts = [
     {
@@ -13,9 +13,9 @@ const posts = [
 
 jest.mock('../../services/prismicio')
 
-describe('Posts page', () => {
+describe('Post page', () => {
     it('Renderização correta', () => {
-        render(<Post posts={posts} />)
+        render(<Posts posts={posts} />)
 
         expect(screen.getByText("My-new-post")).toBeInTheDocument()
     })
