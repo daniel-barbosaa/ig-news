@@ -1,7 +1,7 @@
 import { signIn, useSession } from "next-auth/react";
 import styles from "./styles.module.scss";
 import { api } from "../../services/api";
-import { getStipeJs } from "../../services/stripe-js";
+import { getStripeJs } from "../../services/stripe-js";
 import { useRouter } from "next/router";
 
 export function SubscribeButton() {
@@ -26,7 +26,7 @@ export function SubscribeButton() {
       const { sessionId } = response.data;
 
       // Passando o id utilizando a lib stripe-js e redirecionando o checkout
-      const stripe = await getStipeJs();
+      const stripe = await getStripeJs();
 
       await stripe?.redirectToCheckout({ sessionId });
     } catch (err) {
