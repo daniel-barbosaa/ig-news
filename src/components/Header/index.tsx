@@ -3,7 +3,7 @@ import logoImg from "../../../public/logo.png";
 
 import styles from "./style.module.scss";
 import { SignButton } from "../SingInButton";
-import { LinkActive } from "../LinkActive/index";
+import { LinkActive } from "../LinkActive";
 
 import { ButtonProfile } from "../ButtonProfile";
 import { useSession } from "next-auth/react";
