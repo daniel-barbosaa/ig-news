@@ -21,13 +21,11 @@ export default function PreviewPost({ post }: PreviewPostProps) {
   const router = useRouter();
   const { data: session } = useSession();
 
-
-
   useEffect(() => {
     if (session && (session as any).activeSubscription) {
       router.push(`/posts/${post.slug}`);
     }
-  }, [session]);
+  }, [session, router, post.slug]);
 
   return (
     <>

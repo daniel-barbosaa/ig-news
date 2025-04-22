@@ -12,6 +12,7 @@ interface PostProps {
     content: string;
     updatedAt: string;
   };
+  session: any;
 }
 
 export default function Post({ post }: PostProps) {
@@ -61,7 +62,6 @@ export const getServerSideProps: GetServerSideProps = async ({
   params,
 }) => {
   const session = ((await getSession({ req })) as Session) ?? {};
-
   if (!params || !params.slug || typeof params.slug !== "string") {
     return {
       notFound: true,
@@ -71,7 +71,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   if (!session.activeSubscription) {
     return {
       redirect: {
-        destination: `/`,
+        destination: `/posts/preview/${slug}`,
         permanent: false,
       },
     };

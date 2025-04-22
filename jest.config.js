@@ -11,4 +11,9 @@ moduleNameMapper: {
     "\\.(scss|png|sass)$": "identity-obj-proxy"
 },
 preset: 'ts-jest',
+collectCoverage: true,
+colectCoverageFrom: [
+    "src/**/*.tsx",
+    "!src/**/*.test.tsx",
+]
 };

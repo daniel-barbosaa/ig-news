@@ -5,7 +5,7 @@ import { createClient } from "../../services/prismicio";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse
 ) {
   const client = createClient({ req });
 
