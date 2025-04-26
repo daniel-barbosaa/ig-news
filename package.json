@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine",
-    "test": "jest"
+    "test": "jest",
+    "WATCHPACK": "WATCHPACK_POLLING=true npm run dev"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -22,6 +23,7 @@
     "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.7",
     "axios": "^1.6.8",
+    "caniuse-lite": "^1.0.30001715",
     "dotenv": "^16.4.5",
     "faunadb": "^4.8.0",
     "framer-motion": "^11.1.9",
