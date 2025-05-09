@@ -1,66 +1,144 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
 .headerContainer {
-    height: 5rem;
-    border-bottom: 1px solid var(--gray-800);
+  height: 5rem;
+  border-bottom: 1px solid var(--gray-800);
 }
 
 .headerContent {
-    max-width: 1120px;
+  max-width: 1120px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  nav {
+    margin-left: 5rem;
     height: 5rem;
-    margin: 0 auto;
-    padding: 0 2rem;
 
+    /* Esconde a navbar em telas pequenas para melhorar a experiência mobile */
+    @include respond-to(md) {
+      display: none;
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      height: 5rem;
+      line-height: 5rem;
+      color: var(--gray-300);
+
+      transition: color 0.3s;
+
+      & + a {
+        margin-left: 2rem;
+      }
+
+      &:hover {
+        color: var(--white);
+      }
+
+      &.active {
+        color: var(--white);
+        font-weight: bold;
+      }
+
+      &.active::after {
+        content: "";
+        height: 3px;
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        background: var(--yellow-500);
+      }
+    }
+  }
+  button {
+    margin-left: auto;
+  }
+ .buttonOpenDrawer {
+    /* Por padrão o botão fica escondido, só aparece em dispositivos menores, tablets e celulares.*/
+    display: none;
+
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+
+  .headerProfileContent {
     display: flex;
-    justify-content:space-between;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
 
-    nav {
-        margin-left: 5rem;
-        height: 5rem;
-
-        a {
-            display: inline-block;
-            position: relative;
-            padding: 0 0.5rem;
-            height: 5rem;
-            line-height: 5rem;
-            color: var(--gray-300);
-
-            transition: color .3s;
-
-            & + a {
-                margin-left: 2rem;
-            }
-
-            &:hover {
-                color: var(--white);
-            }
-
-            &.active {
-                color: var(--white);
-                font-weight: bold;
-            }
-
-            &.active::after {
-                content: '';
-                height: 3px;
-                border-radius: 3px 3px 0 0 ;
-                width: 100%;
-                position: absolute;
-                bottom: 1px;
-                left: 0;
-                background: var(--yellow-500);
-            }
-        }
+    /* Esconde a seção de login e perfil em telas pequenas para melhorar a experiência mobile */
+    @include respond-to(md) {
+      display: none;
     }
-    button {
-        margin-left: auto;
+  }
+}
+
+.teste {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: smaller;
+    margin-bottom: 0.5rem;
+    margin-top: 0.7rem;
+    color: var(--gray-300);
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+    padding: 0 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    color: var(--gray-300);
+    transition: color 0.3s;
+    margin-left: 0.5rem;
+
+    &:hover {
+      color: var(--white);
     }
 
-
-    .headerProfileContent {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       gap: 1rem;
+    &.active {
+      color: var(--white);
+      font-weight: bold;
     }
+
+    &.active::after {
+      content: "";
+      height: 3px;
+      border-radius: 3px 3px 0 0;
+      width: 100%;
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      background: var(--yellow-500);
+    }
+  }
+}
+.drawerSectionProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 10px;
+  left: 50%;
 }

@@ -1,44 +1,86 @@
-# Ig news
+<h1>📰 Ignews</h1>
 
-Uma aplicação web desenvolvida na ideia de um blog de noticias sobre o mundo da tecnologia, com opção de login via github para facilitar o acesso, assinatura de valor único que da acesso a todos os posts em tempo real.
+<p>
+  Blog com conteúdo exclusivo sobre React + sistema de assinatura (modo teste).<br />
+  ⚠️ Este projeto foi desenvolvido como parte do curso <strong>Ignite</strong> da <strong>Rocketseat</strong>,
+  com adaptações e melhorias pessoais para fins de aprendizado e portfólio.
+</p>
 
-##  Índice
+<h2>🚀 Como testar o projeto</h2>
 
-1. [Descrição](#descrição)
-2. [Tecnologias Utilizadas](#tecnologias-utilizadas)
-3. [Instalação](#instalação)
-4. [Uso](#uso)
-5. [Configuração](#configuração)
-6. [Contato](#contato)
-7. [Agradecimentos](#agradecimentos)
+<p>
+  <strong>🔗 Acesse:</strong>
+  <a href="https://ig-news-red.vercel.app" target="_blank" rel="noopener noreferrer">Projeto em produção</a>
+</p>
 
+<p>
+  Para aproveitar todas as funcionalidades da aplicação (login e assinatura), siga os passos abaixo:
+</p>
 
-## Descrição 
+<ol>
+  <li><strong>Login com GitHub</strong>
+    <ul>
+      <li>Clique em "Sign in with GitHub".</li>
+      <li>É necessário estar logado em uma conta do GitHub.</li>
+    </ul>
+  </li>
 
-Um aplicação com base na ideia de um blog, um blog por assinatura, já no inicio você tem opção de login com github e opção para assinar o produto, porém só é permitido ter uma assinatrura depois de logado. Na aba posts para os não assinantes tem uma breve parte de cada post e só é liberado o acesso total do post a partir de assinado. Para quem curte noticias sobre a área da tecnologia ficou algo muito prático e de facíl acesso, sem muita firula.
+  <li><strong>Realizar uma assinatura</strong>
+    <ul>
+      <li>Clique no botão de "Subscribe now".</li>
+      <li>Você será redirecionado ao Stripe.</li>
+      <li>Use os dados de cartão de teste do Stripe:</li>
+      <ul>
+        <li>Número do cartão: <code>4242 4242 4242 4242</code></li>
+        <li>Data de expiração: Qualquer data futura (ex: 04/29)</li>
+        <li>CVC: Qualquer número (ex: 123)</li>
+        <li>Nome / CEP: Qualquer valor válido</li>
+      </ul>
+    </ul>
+  </li>
+</ol>
 
-<img src="https://github.com/daniel-barbosaa/ig-news/assets/101154066/26234b6a-0d79-493d-85e6-408856234ebd" alt="capa-do-projeto">
-<img src="https://github.com/daniel-barbosaa/ig-news/assets/101154066/91e3541a-e7ab-4608-ac32-2b9cf6b4b568" alt="capa-do-projeto">
+<p>⚠️ Atenção: esta é uma aplicação fictícia, apenas para fins de aprendizado. Nenhum pagamento real será processado.</p>
 
+<h2>📚 Índice</h2>
+<ul>
+  <li><a href="#descrição">Descrição</a></li>
+  <li><a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a></li>
+  <li><a href="#instalação">Instalação</a></li>
+  <li><a href="#uso">Uso</a></li>
+</ul>
 
-## Tecnologias utilizadas 
+<h2 id="descrição">📝 Descrição</h2>
 
-- [Typescript](https://www.typescriptlang.org/docs/)
-- [NextJs](https://nextjs.org/docs)
-- [ReactJs](https://legacy.reactjs.org/docs/getting-started.html)
-- [NodeJs](https://nodejs.org/docs/latest/api/)
-- [FaunaDB](https://docs.fauna.com/fauna/current/)
-- [Stripe](https://docs.stripe.com/payments?payments=popular)
-- [Primic](https://prismic.io/docs)
-- [Chakra UI](https://v2.chakra-ui.com/docs/components)
+<p>
+  O IGNews é um projeto desenvolvido com foco em aprendizado de tecnologias modernas de autenticação,
+  pagamentos e SSR. É um blog com artigos sobre React onde os posts completos são liberados apenas
+  para usuários autenticados com assinatura ativa.
+</p>
 
+<img src="https://github.com/daniel-barbosaa/ig-news/assets/101154066/26234b6a-0d79-493d-85e6-408856234ebd" alt="Capa do projeto" />
+<img src="https://github.com/daniel-barbosaa/ig-news/assets/101154066/91e3541a-e7ab-4608-ac32-2b9cf6b4b568" alt="Tela de assinatura" />
 
-## Instalação
+<h2 id="tecnologias-utilizadas">🛠 Tecnologias Utilizadas</h2>
 
-```sh
-# Instalar o CLI na maquina. É importante que faça essa etapa para o funcionamento correto da aplicação
+<ul>
+  <li><a href="https://www.typescriptlang.org/docs/" target="_blank">Typescript</a></li>
+  <li><a href="https://nextjs.org/docs" target="_blank">Next.js</a></li>
+  <li><a href="https://legacy.reactjs.org/docs/getting-started.html" target="_blank">React.js</a></li>
+  <li><a href="https://nodejs.org/docs/latest/api/" target="_blank">Node.js</a></li>
+  <li><a href="https://docs.fauna.com/fauna/current/" target="_blank">FaunaDB</a></li>
+  <li><a href="https://docs.stripe.com/payments?payments=popular" target="_blank">Stripe</a></li>
+  <li><a href="https://prismic.io/docs" target="_blank">Prismic</a></li>
+  <li><a href="https://v2.chakra-ui.com/docs/components" target="_blank">Chakra UI</a></li>
+</ul>
+
+<h2 id="instalação">📦 Instalação</h2>
+
+<pre>
+Instalar o CLI na máquina. É importante que faça essa etapa para o funcionamento correto da aplicação:
+<a href="https://learn.microsoft.com/pt-br/dotnet/machine-learning/how-to-guides/install-ml-net-cli?tabs=windows" target="_blank">
 https://learn.microsoft.com/pt-br/dotnet/machine-learning/how-to-guides/install-ml-net-cli?tabs=windows
-
+</a>
 
 # Clone o repositório
 git clone https://github.com/daniel-barbosaa/ig-news.git
@@ -48,68 +90,19 @@ cd ig-news
 
 # Instale as dependências
 npm install
+</pre>
 
-```
+<h2 id="uso">▶️ Uso</h2>
 
-## Uso
-
-```sh
-
-# Iniciar
-
-npm dev
+<pre>
+# Iniciar a aplicação
+npm run dev
 ou
 yarn dev
+</pre>
 
-```
-## Configuração
-
-```sh
-# Antes de usar a aplicação faça isso, essa é a etapa para ouvir o webhooks da aplicação para que funcione conforme o esperado
-# Execute na linha de comando do seu pc:
-
-stripe login
-
-stripe listen --forward-to localhost:3000/api/webhooks
-
-# Acesse
-http://localhost:3000
-
-# Na raiz do projeto crie um arquivo .env.local e cole o seguinte
-
-require('dotenv').config({ path: '.env.local' });
-#Stripe
-STRIPE_WEBHOOKS_SECRET=whsec_293081bf91fa31a34964200ee41d033d09bcf2448df5bbe1ef3b1480153fccc8
-NEXT_PUBLIC_STRIPE_PUBLIC_KEY=pk_test_51P47skAuruhV4Wv0au1oZBChZYGb23BZb30gPTWL3poARWUiUHhleEDlmXWcdeAyyWxFdNJbL4fj69uxraUVaLPn000UgOM0LI
-STRIPE_API_KEY=sk_test_51P47skAuruhV4Wv0mQJgTS7LQgkuHjaa6zCyGnwImhmoisTKz5t08anRhOBShhu9fVSs2Ts6E5LC5zZkucPZ1OqZ00welrzgRb
-STRIPE_SUCCESS_URL=http://localhost:3000/posts
-STRIPE_CANCEL_URL=http://localhost:3000/
-# Github
-
-GITHUB_CLIENT_ID=b3a3195fe8574bdbc2fc
-GITHUB_CLIENT_SECRET=33b3b14750cc65caaefad86521c065bb283ac2b0 
-
-#FaunaDB
-
-FAUNADB_KEY=fnAFe1Y5mGAAQBDoN-uEqnjD6r-Rw-bel2ckfj4R
-
-#PRISMIC CMS
-
-PRISMIC_ACCESS_TOKEN=MC5aakFVOEJFQUFDWUFfZk1I.77-9L0fvv73vv70777-977-9B--_ve-_vQJM77-977-977-9Dz_vv70JVHJ3FX7vv70rO1zvv71P77-9
-
-#NEXT 
-
-NEXTAUTH_SECRET=evZ/4L1O3J+AuB0TUrhP2WqFgGGdE0c1UO1BbgEUDvw
-
-NEXTAUTH_URL=http://localhost:3000
-
-```
-
-## Contato
-
-• Email: danielmendess.dev@gmail.com <br></br>
-• LinkedIn: https://www.linkedin.com/in/daniel-barbos/
-
-
-
-
+<h2>📬 Contato</h2>
+<ul>
+  <li>Email: <a href="mailto:danielmendess.dev@gmail.com">danielmendess.dev@gmail.com</a></li>
+  <li>LinkedIn: <a href="https://www.linkedin.com/in/daniel-barbos/" target="_blank">linkedin.com/in/daniel-barbos</a></li>
+</ul>
