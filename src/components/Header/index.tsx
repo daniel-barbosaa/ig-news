@@ -11,8 +11,6 @@ import { useSession } from "next-auth/react";
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-// Estilizar o drawer menu, colocar botao de login, e perfil.
-
 export function Header() {
   const router = useRouter();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -54,9 +52,16 @@ export function Header() {
           <SignButton />
           {userIsLogged && <ButtonProfile />}
         </div>
-        <button className={styles.buttonOpenDrawer} onClick={handleMenuToggle}>
-          <FaBars size={20} />
-        </button>
+
+        <div className={styles.headerActions}>
+          {userIsLogged && <ButtonProfile />}
+          <button
+            className={styles.buttonOpenDrawer}
+            onClick={handleMenuToggle}
+          >
+            <FaBars size={20} />
+          </button>
+        </div>
       </div>
       <DrawerMenu isOpen={menuIsOpen} onClose={handleMenuToggle}>
         <nav className={styles.drawerNav}>

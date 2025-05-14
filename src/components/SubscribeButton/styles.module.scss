@@ -1,20 +1,26 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
 .subscribeButton {
-    height: 4rem;
-    width: 260px;
-    border: 0;
-    border-radius: 2rem;
-    background: var(--yellow-500);
-    color: var(--gray-900);
-    font-size: 1.25rem;
-    font-weight: bold;
+  height: 4rem;
+  width: 260px;
+  border: 0;
+  border-radius: 2rem;
+  background: var(--yellow-500);
+  color: var(--gray-900);
+  font-size: 1.25rem;
+  font-weight: bold;
+  @include respond-to(md) {
+    width: 100%;
+  }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    transition: filter 0.2s;
+  transition: filter 0.2s;
 
-    &:hover {
-        filter: brightness(0.8);
-    }
+  &:hover {
+    filter: brightness(0.8);
+  }
 }

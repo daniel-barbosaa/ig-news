@@ -63,7 +63,7 @@
   button {
     margin-left: auto;
   }
- .buttonOpenDrawer {
+  .buttonOpenDrawer {
     /* Por padrão o botão fica escondido, só aparece em dispositivos menores, tablets e celulares.*/
     display: none;
 
@@ -84,11 +84,17 @@
     }
   }
 }
-
-.teste {
+.headerActions {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  gap: 1rem;
+
+  > :first-child {
+    display: none;
+
+    @include respond-to(md) {
+      display: block;
+    }
+  }
 }
 
 .drawerNav {

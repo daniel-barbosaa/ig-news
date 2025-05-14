@@ -16,10 +16,12 @@ interface PostProps {
 }
 
 export default function Post({ post }: PostProps) {
+  const title = `${post.title} | ignews`;
+  
   return (
     <>
       <Head>
-        <title>{post.title} | ignews</title>
+        <title>{title}</title>
       </Head>
 
       <main className={styles.container}>

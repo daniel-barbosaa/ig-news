@@ -5,6 +5,9 @@ import { createClient } from "../../services/prismicio";
 import { GetStaticProps } from "next";
 import { RichText } from "prismic-dom";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import Loader from "../../components/Loader";
 
 type Post = {
   slug: string;
@@ -18,6 +21,30 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
+  const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    const handleStartLoader = (url: string) => {
+      if (url.startsWith("/posts/")) {
+        setIsLoading(true);
+      } else {
+        setIsLoading(false);
+      }
+    };
+
+    function handleCompleteLoader() {
+      setIsLoading(false);
+    }
+    router.events.on("routeChangeStart", handleStartLoader);
+    router.events.on("routeChangeComplete", handleCompleteLoader);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStartLoader);
+      router.events.off("hashChangeComplete", handleCompleteLoader);
+    };
+  });
+
   return (
     <>
       <Head>Posts | Ignews</Head>
@@ -33,6 +60,7 @@ export default function Posts({ posts }: PostsProps) {
             </Link>
           ))}
         </div>
+        <Loader isLoading={isLoading} />
       </main>
     </>
   );

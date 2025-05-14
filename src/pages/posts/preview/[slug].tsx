@@ -20,6 +20,7 @@ interface PreviewPostProps {
 export default function PreviewPost({ post }: PreviewPostProps) {
   const router = useRouter();
   const { data: session } = useSession();
+  const title = `${post.title} | ignews`;
 
   useEffect(() => {
     if (session && (session as any).activeSubscription) {
@@ -30,7 +31,7 @@ export default function PreviewPost({ post }: PreviewPostProps) {
   return (
     <>
       <Head>
-        <title>{post.title} | ignews</title>
+        <title>{title}</title>
       </Head>
 
       <main className={styles.container}>
